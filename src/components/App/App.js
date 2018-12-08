@@ -4,6 +4,7 @@ import './App.css';
 import { HashRouter as Router, Route } from "react-router-dom";
 import { connect } from 'react-redux';
 import StepOne from '../StepOne/StepOne';
+import StepTwo from '../StepTwo/StepTwo';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
           <h4><i>Don't forget it!</i></h4>
         </header>
           <Route path="/" exact component={StepOne} />
+          <Route path="/2" exact component={StepTwo} />
         <br/>
           
       </div>

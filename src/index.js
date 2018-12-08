@@ -17,8 +17,12 @@ const stepOneReducer = (state = {}, action) => {
 }
 
 const stepTwoReducer = (state = {}, action) => {
-
-    return state
+    switch (action.type) {
+        case 'ADD_UNDERSTANDING':
+            return action.payload;
+        default:
+            return state;
+    }
 }
 
 const stepThreeReducer = (state = {}, action) => {

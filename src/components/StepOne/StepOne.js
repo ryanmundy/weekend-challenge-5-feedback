@@ -16,12 +16,13 @@ class StepOne extends Component {
 
     handleClick = () => {
         this.props.dispatch({ type: "ADD_FEELING", payload: this.state })
-        // this.props.history.push('/2');
+        this.props.history.push('/2');
     }
 
     render() {
         return (
             <div>
+                <h2>1 of 4 Pages</h2>
                 <h2>How are you feeling today?</h2>
                 <input type="number" placeholder="0" onChange={this.handleFeelingChange}></input>
                 <button onClick={this.handleClick}>Next</button>
