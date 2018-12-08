@@ -11,10 +11,10 @@ class Review extends Component {
     }
 
     submitFeedback = () => {
-        const feeling = this.props.reduxStore.stepOneReducer;
-        const understanding = this.props.reduxStore.stepTwoReducer;
-        const support = this.props.reduxStore.stepThreeReducer;
-        const comments = this.props.reduxStore.stepFourReducer;
+        const feeling = this.props.reduxStore.stepOneReducer.feeling;
+        const understanding = this.props.reduxStore.stepTwoReducer.understanding;
+        const support = this.props.reduxStore.stepThreeReducer.support;
+        const comments = this.props.reduxStore.stepFourReducer.comments;
         let objectToSend = {
             feeling: feeling,
             understanding: understanding,
@@ -26,7 +26,7 @@ class Review extends Component {
 
         axios.post('/feedback', objectToSend)
             .then(res => {
-                console.log('back from server with', res);
+                console.log('back from server with', res.data);
                 
             }).catch(err => {
                 console.log('error in post:', err);
