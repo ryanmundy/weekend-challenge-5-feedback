@@ -35,8 +35,12 @@ const stepThreeReducer = (state = {}, action) => {
 }
 
 const stepFourReducer = (state = {}, action) => {
-
-    return state
+    switch (action.type) {
+        case 'ADD_COMMENTS':
+            return action.payload;
+        default:
+            return state;
+    }
 }
 
 const storeInstance = createStore(

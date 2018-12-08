@@ -16,7 +16,7 @@ class StepThree extends Component {
 
     handleClick = () => {
         this.props.dispatch({ type: "ADD_SUPPORT", payload: this.state })
-        // this.props.history.push('/3');
+        this.props.history.push('/4');
     }
 
     render() {

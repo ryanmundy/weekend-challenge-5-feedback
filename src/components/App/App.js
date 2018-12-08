@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import StepOne from '../StepOne/StepOne';
 import StepTwo from '../StepTwo/StepTwo';
 import StepThree from '../StepThree/StepThree';
+import StepFour from '../StepFour/StepFour';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
           <Route path="/" exact component={StepOne} />
           <Route path="/2" exact component={StepTwo} />
           <Route path="/3" exact component={StepThree} />
+          <Route path="/4" exact component={StepFour} />
         <br/>
           
       </div>
