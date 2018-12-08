@@ -26,8 +26,12 @@ const stepTwoReducer = (state = {}, action) => {
 }
 
 const stepThreeReducer = (state = {}, action) => {
-
-    return state
+    switch (action.type) {
+        case 'ADD_SUPPORT':
+            return action.payload;
+        default:
+            return state;
+    }
 }
 
 const stepFourReducer = (state = {}, action) => {

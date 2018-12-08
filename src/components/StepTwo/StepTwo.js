@@ -8,7 +8,7 @@ class StepTwo extends Component {
     }
 
     handleUnderstandingChange = (event) => {
-        console.log('in feelingChange');
+        console.log('in understanding');
         this.setState({
             understanding: event.target.value
         });
@@ -16,7 +16,7 @@ class StepTwo extends Component {
 
     handleClick = () => {
         this.props.dispatch({ type: "ADD_UNDERSTANDING", payload: this.state })
-        // this.props.history.push('/2');
+        this.props.history.push('/3');
     }
 
     render() {
