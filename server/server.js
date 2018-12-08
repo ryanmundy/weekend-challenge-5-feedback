@@ -9,7 +9,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
+app.post('/feedback', (req, res) => {
+    console.log('in /feedback POST:', req.body);
+    res.send(req.body)
 
+})//end /songs POST
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {

@@ -7,6 +7,7 @@ import StepOne from '../StepOne/StepOne';
 import StepTwo from '../StepTwo/StepTwo';
 import StepThree from '../StepThree/StepThree';
 import StepFour from '../StepFour/StepFour';
+import Review from '../Review/Review';
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
           <Route path="/3" exact component={StepThree} />
           <Route path="/4" exact component={StepFour} />
         <br/>
+        <Review/>
           
       </div>
       </Router>

@@ -16,7 +16,7 @@ class StepFour extends Component {
 
     handleClick = () => {
         this.props.dispatch({ type: "ADD_COMMENTS", payload: this.state })
-        // this.props.history.push('/3');
+        this.props.history.push('/');
     }
 
     render() {
