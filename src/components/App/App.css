@@ -16,3 +16,11 @@
 .App-intro {
   font-size: large;
 }
+
+.routes{
+  border: solid black;
+  margin-top: 50px;
+  margin-right: 300px;
+  margin-left: 300px;
+
+}

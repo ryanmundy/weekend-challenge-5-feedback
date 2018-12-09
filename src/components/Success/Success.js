@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Review from '../Review/Review';
 import { Edit } from '@material-ui/icons';
 import Button from '@material-ui/core/Button';
+import './Success.css';
 
 class Success extends Component {
 
@@ -27,7 +28,7 @@ class Success extends Component {
                 <h2>Please click "save" to submit your feedback</h2>
                 <br />
                 <Review />
-                <Button variant="outlined" color="primary" onClick={this.newFeedback}>Leave New Feedback <Edit /></Button>
+                <Button id="newFeedback" variant="outlined" color="primary" onClick={this.newFeedback}>Leave New Feedback <Edit /></Button>
             </div>
 
         );
