@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route } from "react-router-dom";
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import StepOne from '../StepOne/StepOne';
 import StepTwo from '../StepTwo/StepTwo';
 import StepThree from '../StepThree/StepThree';

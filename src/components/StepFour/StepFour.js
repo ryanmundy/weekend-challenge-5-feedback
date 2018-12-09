@@ -1,46 +1,51 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { connect } from 'react-redux';
 
 class StepFour extends Component {
     state = {
-        comments: ''
+        comments: '',
+        completed: false
     }
 
     handleCommentsChange = (event) => {
         console.log('in support');
         this.setState({
-            comments: event.target.value
+            comments: event.target.value,
+            completed: true
         });
     }
 
     handleClick = () => {
+        if(this.state.completed===false){
+            alert('please complete comments section')
+        }else{
         this.props.dispatch({ type: "ADD_COMMENTS", payload: this.state })
+        }
         // this.props.history.push('/');
     }
 
-    submitFeedback = () => {
-        const feeling = this.props.reduxStore.stepOneReducer.feeling;
-        const understanding = this.props.reduxStore.stepTwoReducer.understanding;
-        const support = this.props.reduxStore.stepThreeReducer.support;
-        const comments = this.props.reduxStore.stepFourReducer.comments;
-        let objectToSend = {
-            feeling: feeling,
-            understanding: understanding,
-            support: support,
-            comments: comments
-        }
-        console.log(objectToSend);
+    // submitFeedback = () => {
+    //     const feeling = this.props.reduxStore.stepOneReducer.feeling;
+    //     const understanding = this.props.reduxStore.stepTwoReducer.understanding;
+    //     const support = this.props.reduxStore.stepThreeReducer.support;
+    //     const comments = this.props.reduxStore.stepFourReducer.comments;
+    //     let objectToSend = {
+    //         feeling: feeling,
+    //         understanding: understanding,
+    //         support: support,
+    //         comments: comments
+    //     }
+    //     console.log(objectToSend);
 
 
-        axios.post('/feedback', objectToSend)
-            .then(res => {
-                console.log('back from server with', res.data);
+    //     axios.post('/feedback', objectToSend)
+    //         .then(res => {
+    //             console.log('back from server with', res.data);
 
-            }).catch(err => {
-                console.log('error in post:', err);
-            })
-    }
+    //         }).catch(err => {
+    //             console.log('error in post:', err);
+    //         })
+    // }
 
     render() {
         return (
@@ -49,7 +54,7 @@ class StepFour extends Component {
                 <h2>Any comments you want to leave?</h2>
                 <input type="text" placeholder="comments" onChange={this.handleCommentsChange}></input>
                 <button onClick={this.handleClick}>Next</button>
-                <button onClick={this.submitFeedback}>Submit Feedback</button>
+                {/* <button onClick={this.submitFeedback}>Submit Feedback</button> */}
             </div>
 
         );

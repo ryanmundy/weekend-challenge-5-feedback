@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { connect } from 'react-redux';
 
 class StepOne extends Component {
     state = {
-        feeling: 0
+        feeling: 0,
+        completed: false
         }
     
         handleFeelingChange = (event) => {
             console.log('in feelingChange');
             this.setState({
-                    feeling: event.target.value   
+                    feeling: event.target.value,
+                    completed: true  
             });
         }
 
     handleClick = () => {
-        this.props.dispatch({ type: "ADD_FEELING", payload: this.state })
-        this.props.history.push('/2');
+        if (this.state.completed === false) {
+            alert('please complete feelings section')
+        } else {
+            this.props.dispatch({ type: "ADD_FEELING", payload: this.state })
+            this.props.history.push('/2');
+        }
+        
     }
 
     render() {

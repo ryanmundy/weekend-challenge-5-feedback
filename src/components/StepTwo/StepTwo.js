@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { connect } from 'react-redux';
 
 class StepTwo extends Component {
     state = {
-        understanding: 0
+        understanding: 0,
+        completed: false
     }
 
     handleUnderstandingChange = (event) => {
         console.log('in understanding');
         this.setState({
-            understanding: event.target.value
+            understanding: event.target.value,
+            completed: true
         });
     }
 
     handleClick = () => {
-        this.props.dispatch({ type: "ADD_UNDERSTANDING", payload: this.state })
-        this.props.history.push('/3');
+        if (this.state.completed === false) {
+            alert('please complete understanding section')
+        } else {
+            this.props.dispatch({ type: "ADD_UNDERSTANDING", payload: this.state })
+            this.props.history.push('/3');
+        }
+        
     }
 
     render() {
