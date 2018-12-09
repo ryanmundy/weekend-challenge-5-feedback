@@ -7,6 +7,14 @@ class Success extends Component {
 state = {}
 
 newFeedback = () => {
+    this.setState({
+        feeling: '',
+        understanding: '',
+        support: '',
+        comments: '',
+        completed: false
+    })
+    this.props.dispatch({ type: "CLEAR_DATA", payload: this.state })
     this.props.history.push('/');
 }
     render() {

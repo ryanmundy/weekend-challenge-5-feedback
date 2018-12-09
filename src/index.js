@@ -13,6 +13,8 @@ const stepOneReducer = (state = {}, action) => {
         case 'ADD_FEELING':
             console.log(action.payload);
             return action.payload;
+        case 'CLEAR_DATA':
+            return action.payload;    
             
         default:
             return state;
@@ -23,6 +25,8 @@ const stepTwoReducer = (state = {}, action) => {
     switch (action.type) {
         case 'ADD_UNDERSTANDING':
             return action.payload;
+        case 'CLEAR_DATA':
+            return action.payload;
         default:
             return state;
     }
@@ -32,6 +36,8 @@ const stepThreeReducer = (state = {}, action) => {
     switch (action.type) {
         case 'ADD_SUPPORT':
             return action.payload;
+        case 'CLEAR_DATA':
+            return action.payload;
         default:
             return state;
     }
@@ -40,6 +46,8 @@ const stepThreeReducer = (state = {}, action) => {
 const stepFourReducer = (state = {}, action) => {
     switch (action.type) {
         case 'ADD_COMMENTS':
+            return action.payload;
+        case 'CLEAR_DATA':
             return action.payload;
         default:
             return state;
