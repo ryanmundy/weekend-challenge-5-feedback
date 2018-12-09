@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Review from '../Review/Review';
 
 class StepThree extends Component {
     state = {
@@ -32,6 +33,8 @@ class StepThree extends Component {
                 <h2>How well are you being supported?</h2>
                 <input type="number" placeholder="0" onChange={this.handleSupportChange}></input>
                 <button onClick={this.handleClick}>Next</button>
+                <br/>
+                <Review/>
             </div>
 
         );
