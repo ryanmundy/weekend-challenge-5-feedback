@@ -19,12 +19,13 @@ class App extends Component {
           <h1 className="App-title">Feedback!</h1>
           <h4><i>Don't forget it!</i></h4>
         </header>
+        <div className="routes">
           <Route path="/" exact component={StepOne} />
           <Route path="/2" exact component={StepTwo} />
           <Route path="/3" exact component={StepThree} />
           <Route path="/4" exact component={StepFour} />
           <Route path="/5" exact component={Success} />
-          
+          </div>
         
           
       </div>

@@ -32,8 +32,10 @@ class Review extends Component {
         if (this.props.reduxStore.stepFourReducer.completed === true &&
              this.props.reduxStore.stepThreeReducer.completed === true &&
              this.props.reduxStore.stepTwoReducer.completed === true &&
-             this.props.reduxStore.stepOneReducer.completed === true){
-            submitButton = <Button variant="outlined" color="primary" onClick={this.submitFeedback}>Save <Save/></Button>
+             this.props.reduxStore.stepOneReducer.completed === true ){
+            submitButton = <Button disabled={false} variant="outlined" color="primary" onClick={this.submitFeedback}>Save <Save/></Button>
+        } else {
+            submitButton = <Button disabled={true} variant="outlined" color="primary" onClick={this.submitFeedback}>Save <Save /></Button>
         }
 
         return (
