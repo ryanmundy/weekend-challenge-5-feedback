@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Review from '../Review/Review';
+import Button from '@material-ui/core/Button';
+import {  Forward } from '@material-ui/icons';
 
 class StepOne extends Component {
     state = {
@@ -32,7 +34,7 @@ class StepOne extends Component {
                 <h2>1 of 4 Pages</h2>
                 <h2>How are you feeling today?</h2>
                 <input type="number" placeholder="0" onChange={this.handleFeelingChange}></input>
-                <button onClick={this.handleClick}>Next</button>
+                <Button variant="contained" color="primary" onClick={this.handleClick}>Next <Forward/></Button>
                 <br/>
                 <Review/>
             </div>

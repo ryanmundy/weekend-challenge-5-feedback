@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
+import { Save } from '@material-ui/icons';
 
 class Review extends Component {
 
@@ -31,7 +33,7 @@ class Review extends Component {
              this.props.reduxStore.stepThreeReducer.completed === true &&
              this.props.reduxStore.stepTwoReducer.completed === true &&
              this.props.reduxStore.stepOneReducer.completed === true){
-            submitButton = <button onClick={this.submitFeedback}>Submit</button>
+            submitButton = <Button variant="outlined" color="primary" onClick={this.submitFeedback}>Save <Save/></Button>
         }else{
             submitButton = <p>* please complete all fields before submitting</p>
         }

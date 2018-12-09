@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Review from '../Review/Review';
+import Button from '@material-ui/core/Button';
+import { Forward } from '@material-ui/icons';
 
 class StepFour extends Component {
     state = {
@@ -31,7 +33,7 @@ class StepFour extends Component {
                 <h2>4 of 4 Pages</h2>
                 <h2>Any comments you want to leave?</h2>
                 <input type="text" placeholder="comments" onChange={this.handleCommentsChange}></input>
-                <button onClick={this.handleClick}>Next</button>
+                <Button variant="contained" color="primary" onClick={this.handleClick}>Next <Forward/></Button>
                 <br />
                 <Review />
             </div>

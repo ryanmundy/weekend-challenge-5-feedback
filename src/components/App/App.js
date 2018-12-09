@@ -6,8 +6,8 @@ import StepOne from '../StepOne/StepOne';
 import StepTwo from '../StepTwo/StepTwo';
 import StepThree from '../StepThree/StepThree';
 import StepFour from '../StepFour/StepFour';
-import Review from '../Review/Review';
 import Success from '../Success/Success';
+import 'typeface-roboto';
 
 class App extends Component {
 
