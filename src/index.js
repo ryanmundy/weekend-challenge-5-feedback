@@ -7,15 +7,15 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
-
+//Reducers
 const stepOneReducer = (state = {}, action) => {
     switch (action.type) {
         case 'ADD_FEELING':
             console.log(action.payload);
             return action.payload;
         case 'CLEAR_DATA':
-            return action.payload;    
-            
+            return action.payload;
+
         default:
             return state;
     }
@@ -54,6 +54,7 @@ const stepFourReducer = (state = {}, action) => {
     }
 }
 
+//creates reduxStore
 const storeInstance = createStore(
     combineReducers({
         stepOneReducer,
