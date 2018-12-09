@@ -3,6 +3,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import { Save } from '@material-ui/icons';
+import './Review.css';
 
 class Review extends Component {
 
@@ -39,17 +40,13 @@ class Review extends Component {
         }
 
         return (
-            <div>
+            <div id="feedback">
                 {submitButton}
-                <h2>Your Feedback</h2>
-               
-                
+                    <h2>Your Feedback</h2>
                     <p>Feelings: {this.props.reduxStore.stepOneReducer.feeling}</p>
                     <p>Understanding: {this.props.reduxStore.stepTwoReducer.understanding}</p>
                     <p>Support: {this.props.reduxStore.stepThreeReducer.support}</p>
                     <p>Comments: {this.props.reduxStore.stepFourReducer.comments}</p>
-        
-                
             </div>
 
         );

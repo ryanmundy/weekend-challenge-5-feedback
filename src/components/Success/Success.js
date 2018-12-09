@@ -22,7 +22,7 @@ newFeedback = () => {
     render() {
         return (
             <div>
-               <h2>Please click "save" to confirm your feedback</h2>
+               <h2>Please click "save" to submit your feedback</h2>
                 <br />
                 <Review />
                 <Button variant="outlined" color="primary" onClick={this.newFeedback}>Leave New Feedback <Edit/></Button>

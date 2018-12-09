@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Review from '../Review/Review';
 import Button from '@material-ui/core/Button';
 import { Forward } from '@material-ui/icons';
+import './StepTwo.css';
 
 class StepTwo extends Component {
     state = {
@@ -34,7 +35,7 @@ class StepTwo extends Component {
                 <h2>2 of 4 Pages</h2>
                 <h2>How well are you understanding the content?</h2>
                 <input type="number" placeholder="0" onChange={this.handleUnderstandingChange}></input>
-                <Button variant="contained" color="primary" onClick={this.handleClick}>Next <Forward/></Button>
+                <Button id="button" variant="contained" color="primary" onClick={this.handleClick}>Next <Forward/></Button>
                 <br/>
                 <Review/>
             </div>
